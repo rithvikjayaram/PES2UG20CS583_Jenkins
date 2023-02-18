@@ -3,13 +3,22 @@ agent any
 stages {
     stage('Build') {
         steps {
+            sh 'mvn clean install'
             sh 'g++ -o pes2ug20cs583-1 hello.cpp'
         }
     }
     
     stage('Test') {
         steps {
-            h './pes2ug20cs583-1'
+            sh './pes2ug20cs583-1'
+        }
+    }
+    
+    stage('Deploy') {
+        steps {
+            // deployment code
+            sh 'mvn deploy'
+            echo 'deployment successful'
         }
     }
     
