@@ -14,13 +14,7 @@ stages {
         }
     }
     
-    stage('Deploy') {
-        steps {
-            // deployment code
-            sh 'mvn deploy'
-            echo 'deployment successful'
-        }
-    }
+    
     
    
 }
