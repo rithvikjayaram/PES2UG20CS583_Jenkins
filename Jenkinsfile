@@ -3,7 +3,7 @@ agent any
 stages {
     stage('Build') {
         steps {
-            sh 'mvn clean install'
+            
             sh 'g++ -o pes2ug20cs583-1 hello.cpp'
         }
     }
